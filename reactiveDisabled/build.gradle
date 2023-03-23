@@ -1,0 +1,41 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.8'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.reactive'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+	implementation 'org.apache.camel.springboot:camel-servlet-starter:3.20.1'
+	implementation 'org.apache.camel.springboot:camel-spring-boot-starter:3.20.1'
+	implementation "org.apache.camel.springboot:camel-jackson-starter:3.20.1"
+	implementation 'org.apache.camel:camel-http:3.20.1'
+
+	implementation 'io.projectreactor:reactor-core:3.5.2'
+
+	implementation 'org.apache.camel:camel-netty-http:3.20.1'
+
+	implementation 'io.hawt:hawtio-springboot:2.13.5'
+	implementation 'org.apache.camel:camel-management:3.20.1'
+
+
+
+
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
